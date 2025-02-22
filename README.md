@@ -57,28 +57,36 @@ Sistema completo para gerenciamento de assinaturas com:
 ## 🤸 Começo Rápido <a name="começo-rápido"></a>
 
 ### Pré-requisitos
-```bash
-node -v # v18.16.0+
-mongod --version # v6.0+
--[npm](https://www.npmjs.com/) 
 
-**Clonar Repositório**
+Siga estas etapas para configurar o projeto localmente em sua máquina.
+
+**Pré-requisitos**
+
+Certifique-se de ter o seguinte instalado em sua máquina:
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en)
+- [npm](https://www.npmjs.com/) (Gerenciador de Pacotes de Nó)
+
+**Clonando o Repositório**
 
 ```bash
 git clone https://github.com/adrianhajdin/subscription-tracker-api.git
 cd subscription-tracker-api
+```
 
 **Installation**
 
-Install the project dependencies using npm:
+Instale as dependências do projeto usando npm:
 
 ```bash
 npm install
 ```
 
-**Set Up Environment Variables**
 
-Create a new file named `.env.local` in the root of your project and add the following content:
+**Configurar variáveis ​​de ambiente**
+
+Crie um novo arquivo chamado `.env.local` na raiz do seu projeto e adicione o seguinte conteúdo:
 
 ```env
 # PORTA
