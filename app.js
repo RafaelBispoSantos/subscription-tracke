@@ -1,7 +1,7 @@
 import express from 'express';
 import cookieParser from 'cookie-parser';
 
-import { PORT } from './config/env.js';
+import { PORT, SERVER_URL } from './config/env.js';
 
 import userRouter from './routes/user.router.js';
 import authRouter from './routes/auth.routes.js';
@@ -30,26 +30,9 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, async () => {
-  console.log(`Subscription Tracker API is running on http://localhost:${PORT}`);
+  console.log(`Subscription Tracker API is running on ${PORT}`);
+
   await connectToDatabase();
 });
-
-// Por:
-async function startServer() {
-  try {
-    // Conecta ao banco primeiro
-    await connectToDatabase();
-    console.log("✅ Conectado ao banco de dados com sucesso!");
-
-    // Inicia o servidor após a conexão
-    app.listen(PORT, () => {
-      console.log(`🚀 Servidor rodando na porta ${PORT}`);
-    });
-  } catch (error) {
-    console.error("❌ Falha ao conectar ao banco de dados:", error);
-    process.exit(1); // Encerra o processo se houver erro
-  }
-}
-startServer();
 
 export default app;
