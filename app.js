@@ -1,7 +1,7 @@
 import express from 'express';
 import cookieParser from 'cookie-parser';
 
-import { PORT, SERVER_URL } from './config/env.js';
+import { PORT } from './config/env.js';
 
 import userRouter from './routes/user.router.js';
 import authRouter from './routes/auth.routes.js';
@@ -26,7 +26,7 @@ app.use('/api/v1/workflows', workflowRouter);
 app.use(errorMiddleware);
 
 app.get('/', (req, res) => {
-  res.send(`Welcome to the Subscription Tracker API! ${SERVER_URL}`);
+  res.send(`Welcome to the Subscription Tracker API!`);
 });
 
 app.listen(PORT, async () => {
