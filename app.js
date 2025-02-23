@@ -41,7 +41,7 @@ async function startServer() {
     });
   } catch (error) {
     console.error("❌ Falha ao conectar ao banco de dados:", error);
-    process.exit(1); // Encerra o processo se houver erro
+    
   }
 }
 
