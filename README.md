@@ -153,7 +153,7 @@ Abrir [http://localhost:5500](http://localhost:5500) no seu navegador ou em qual
 
 ## 🚀 Mais Informações <a name="mais-informações"></a>
 
-[![Deploy na Vercel](https://subscription-ecru-phi.vercel.app/)](https://subscription-ecru-phi.vercel.app/)  
+[![Deploy na Vercel](https://vercel.com/button)](https://subscription-ecru-phi.vercel.app/)  
 
 * **Desenvolvido por:** [ JavaScript Mastery ]   
 
