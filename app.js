@@ -29,10 +29,22 @@ app.get('/', (req, res) => {
   res.send(`Welcome to the Subscription Tracker API!`);
 });
 
-app.listen(PORT, async () => {
-  console.log(`Subscription Tracker API is running on ${PORT}`);
+async function startServer() {
+  try {
+    // Conecta ao banco primeiro
+    await connectToDatabase();
+    console.log("✅ Conectado ao banco de dados com sucesso!");
 
-  await connectToDatabase();
-});
+    // Inicia o servidor após a conexão
+    app.listen(PORT, () => {
+      console.log(`🚀 Servidor rodando na porta http://localhost:${PORT}`);
+    });
+  } catch (error) {
+    console.error("❌ Falha ao conectar ao banco de dados:", error);
+    process.exit(1); // Encerra o processo se houver erro
+  }
+}
+
+startServer();
 
 export default app;
