@@ -26,11 +26,11 @@ app.use('/api/v1/workflows', workflowRouter);
 app.use(errorMiddleware);
 
 app.get('/', (req, res) => {
-  res.send('Welcome to the Subscription Tracker API!');
+  res.send(`Welcome to the Subscription Tracker API! ${SERVER_URL}`);
 });
 
 app.listen(PORT, async () => {
-  console.log(`Subscription Tracker API is running on http://localhost:${PORT}`);
+  console.log(`Subscription Tracker API is running on `);
 
   await connectToDatabase();
 });
